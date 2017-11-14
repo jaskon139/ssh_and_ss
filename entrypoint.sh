@@ -27,7 +27,7 @@ ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -a nobody --fast-op
 #              -d $DNS_ADDR_2 \
 #              $UDP \
 #              -f /tmp/ss.pid &
-server_linux_amd64 -t "127.0.0.1:3721" -l ":3824" -key phpgao --mode fast --mtu 1350 "" &
+server_linux_amd64 -t "127.0.0.1:3721" -l ":3824" -key phpgao --mode fast --crypt aes-192 --mtu 1350 "" &
 #              -l ":$KCP_LISTEN" \
 #              -key $KCP_PASS \
 #              --mode $KCP_MODE \
