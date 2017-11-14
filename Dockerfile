@@ -1,4 +1,4 @@
-FROM sickp/alpine-sshd:latest
+FROM sjourdan/alpine-sshd
 RUN echo "root:sunshine" | chpasswd
 
 MAINTAINER LaoGao <noreply@phpgao.com>
