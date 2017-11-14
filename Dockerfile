@@ -3,8 +3,6 @@ MAINTAINER LaoGao <noreply@phpgao.com>
 
 ENV USER user
 ENV PASSWORD password
-
-
 ARG SS_VER=3.0.3
 ARG SS_URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz
 ARG KCP_VER=20170315
