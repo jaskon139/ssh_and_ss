@@ -1,6 +1,4 @@
 FROM sjourdan/alpine-sshd
-RUN echo "root:sunshine" | chpasswd
-
 MAINTAINER LaoGao <noreply@phpgao.com>
 
 ENV USER user
