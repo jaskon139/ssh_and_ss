@@ -9,7 +9,6 @@ RUN apk --update add openssh \
 		&& echo "root:${ROOT_PASSWORD}" | chpasswd \
 		&& rm -rf /var/cache/apk/* /tmp/*
 
-COPY entrypoint.sh /usr/local/bin/
 
 EXPOSE 22
 
@@ -96,5 +95,6 @@ EXPOSE $KCP_LISTEN/udp  22/TCP
 #              --crypt $KCP_ENCRYPT \
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP
+COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
