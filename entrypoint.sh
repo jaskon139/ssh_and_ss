@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # generate host keys if not present
 ssh-keygen -A
 echo "root:password" | chpasswd
@@ -36,4 +35,4 @@ echo "root:password" | chpasswd
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
-/usr/sbin/sshd -D -e "$@"
+exec /usr/sbin/sshd -D -e "$@"
