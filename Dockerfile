@@ -78,21 +78,22 @@ EXPOSE $SERVER_PORT/tcp $SERVER_PORT/udp
 EXPOSE $KCP_LISTEN/udp  22/TCP
 
 
-CMD  /entrypoint.sh && ss-server -s $SERVER_ADDR \
-              -p $SERVER_PORT \
-              -k $PASSWORD \
-              -m $METHOD \
-              -t $TIMEOUT \
-              -a $USER \
-              $FASTOPEN \
-              -d $DNS_ADDR \
-              -d $DNS_ADDR_2 \
-              $UDP \
-              -f /tmp/ss.pid \
-              && server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
-              -l ":$KCP_LISTEN" \
-              -key $KCP_PASS \
-              --mode $KCP_MODE \
-              --crypt $KCP_ENCRYPT \
-              --mtu $KCP_MUT \
-              $KCP_NOCOMP
+#CMD  /entrypoint.sh && ss-server -s $SERVER_ADDR \
+#              -p $SERVER_PORT \
+#              -k $PASSWORD \
+#              -m $METHOD \
+#              -t $TIMEOUT \
+#              -a $USER \
+#              $FASTOPEN \
+#              -d $DNS_ADDR \
+#              -d $DNS_ADDR_2 \
+#              $UDP \
+#              -f /tmp/ss.pid \
+#              && server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
+#              -l ":$KCP_LISTEN" \
+#              -key $KCP_PASS \
+#              --mode $KCP_MODE \
+#              --crypt $KCP_ENCRYPT \
+#              --mtu $KCP_MUT \
+#              $KCP_NOCOMP
+ENTRYPOINT ["entrypoint.sh"]
