@@ -67,7 +67,7 @@ KCP_NOCOMP=''
 EXPOSE $SERVER_PORT/tcp $SERVER_PORT/udp
 EXPOSE $KCP_LISTEN/udp  22/TCP
 
-CMD ss-server -s $SERVER_ADDR \
+CMD /entrypoint.sh && ss-server -s $SERVER_ADDR \
               -p $SERVER_PORT \
               -k $PASSWORD \
               -m $METHOD \
