@@ -5,8 +5,7 @@ ssh-keygen -A
 
 echo "root:password" | chpasswd
 
-# do not detach (-D), log to stderr (-e), passthrough other arguments
-/usr/sbin/sshd -D -e "$@" &
+
 
 export SERVER_ADDR=0.0.0.0 
 export SERVER_PORT=3721 
@@ -44,3 +43,6 @@ server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
               --crypt $KCP_ENCRYPT \
               --mtu $KCP_MUT \
               $KCP_NOCOMP &
+
+# do not detach (-D), log to stderr (-e), passthrough other arguments
+/usr/sbin/sshd -D -e "$@" 
