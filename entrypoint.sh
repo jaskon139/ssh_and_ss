@@ -36,11 +36,11 @@ ss-server -s 0.0.0.0 -p 3721 -k $PASSWORD \
               -d $DNS_ADDR \
               -d $DNS_ADDR_2 \
               $UDP \
-              -f /tmp/ss.pid \
-              && server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
+              -f /tmp/ss.pid &
+server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
               -l ":$KCP_LISTEN" \
               -key $KCP_PASS \
               --mode $KCP_MODE \
               --crypt $KCP_ENCRYPT \
               --mtu $KCP_MUT \
-              $KCP_NOCOMP
+              $KCP_NOCOMP &
