@@ -96,4 +96,5 @@ EXPOSE $KCP_LISTEN/udp  22/TCP
 #              --crypt $KCP_ENCRYPT \
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP
+RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
