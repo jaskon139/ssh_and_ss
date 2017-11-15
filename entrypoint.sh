@@ -27,22 +27,22 @@ export KCP_MUT=1350
 export KCP_NOCOMP=''
 
 
-ss-server -s 0.0.0.0 -p 3721 -k $PASSWORD \
-              -m $METHOD \
-              -t $TIMEOUT \
-              -a $USER \
-              $FASTOPEN \
-              -d $DNS_ADDR \
-              -d $DNS_ADDR_2 \
-              $UDP \
-              -f /tmp/ss.pid &
-server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
-              -l ":$KCP_LISTEN" \
-              -key $KCP_PASS \
-              --mode $KCP_MODE \
-              --crypt $KCP_ENCRYPT \
-              --mtu $KCP_MUT \
-              $KCP_NOCOMP &
+#ss-server -s 0.0.0.0 -p 3721 -k $PASSWORD \
+#              -m $METHOD \
+#              -t $TIMEOUT \
+#              -a $USER \
+#              $FASTOPEN \
+#              -d $DNS_ADDR \
+#              -d $DNS_ADDR_2 \
+#              $UDP \
+#              -f /tmp/ss.pid &
+#server_linux_amd64 -t "127.0.0.1:$SERVER_PORT" \
+#              -l ":$KCP_LISTEN" \
+#              -key $KCP_PASS \
+#              --mode $KCP_MODE \
+#              --crypt $KCP_ENCRYPT \
+#              --mtu $KCP_MUT \
+#              $KCP_NOCOMP &
 
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 /usr/sbin/sshd -D -e "$@" 
