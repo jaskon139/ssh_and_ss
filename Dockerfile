@@ -96,4 +96,4 @@ EXPOSE $KCP_LISTEN/udp  22/TCP
 #              --crypt $KCP_ENCRYPT \
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/sentrypoint.sh"]
