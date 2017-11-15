@@ -7,24 +7,24 @@ echo "root:password" | chpasswd
 
 
 
-export SERVER_ADDR=0.0.0.0 
-export SERVER_PORT=3721 
-export PASSWORD=laogao 
-export METHOD=aes-256-cfb 
-export TIMEOUT=300 
-export FASTOPEN=--fast-open 
-export UDP_RELAY=-u 
-export USER=nobody 
-export DNS_ADDR=8.8.8.8 
-export DNS_ADDR_2=8.8.4.4
+#export SERVER_ADDR=0.0.0.0 
+#export SERVER_PORT=3721 
+#export PASSWORD=laogao 
+#export METHOD=aes-256-cfb 
+#export TIMEOUT=300 
+#export FASTOPEN=--fast-open 
+#export UDP_RELAY=-u 
+#export USER=nobody 
+#export DNS_ADDR=8.8.8.8 
+#export DNS_ADDR_2=8.8.4.4
 
 
-export ENV KCP_LISTEN=3824 
-export KCP_PASS=phpgao 
-export KCP_ENCRYPT=aes-192 
-export KCP_MODE=fast 
-export KCP_MUT=1350 
-export KCP_NOCOMP=''
+#export ENV KCP_LISTEN=3824 
+#export KCP_PASS=phpgao 
+#export KCP_ENCRYPT=aes-192 
+#export KCP_MODE=fast 
+#export KCP_MUT=1350 
+#export KCP_NOCOMP=''
 
 
 #ss-server -s 0.0.0.0 -p 3721 -k $PASSWORD \
