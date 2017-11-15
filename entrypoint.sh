@@ -6,7 +6,7 @@ ssh-keygen -A
 echo "root:password" | chpasswd
 
 # do not detach (-D), log to stderr (-e), passthrough other arguments
-/usr/sbin/sshd -D -e "$@"
+/usr/sbin/sshd -D -e "$@" &
 
 export SERVER_ADDR=0.0.0.0 
 export SERVER_PORT=3721 
