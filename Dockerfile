@@ -95,8 +95,7 @@ EXPOSE $KCP_LISTEN/udp  22/TCP
 #              --crypt $KCP_ENCRYPT \
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+
 
 RUN apk update ; \
     apk add git ;\
@@ -114,5 +113,7 @@ RUN apk update ; \
     cd ..;\
     rm -rf dog-tunnel;
 
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
