@@ -98,7 +98,7 @@ EXPOSE $KCP_LISTEN/udp  22/TCP
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-apk update ; \
+RUN apk update ; \
     apk add git ;\
     apk add make go; \
     go version; \
