@@ -36,4 +36,4 @@ server_linux_amd64 -t "127.0.0.1:3721" -l ":3824" -key phpgao --mode fast --cryp
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 cd /data 
-/usr/local/bin/kcptunserver 9.9.9.9 6789 127.0.0.1 127.0.0.1 3824
+#kcptunserver 9.9.9.9 6789 127.0.0.1 127.0.0.1 3824
