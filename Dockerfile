@@ -81,3 +81,11 @@ CMD ss-server -s $SERVER_ADDR \
               --crypt $KCP_ENCRYPT \
               --mtu $KCP_MUT \
               $KCP_NOCOMP
+              
+COPY entrypoint.sh /usr/local/bin/
+COPY kcptunserver /
+RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN chmod +x /kcptunserver
+
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
