@@ -1,7 +1,7 @@
 #!/bin/sh
 # generate host keys if not present
-ssh-keygen -A
-echo "root:password" | chpasswd
+# ssh-keygen -A
+# echo "root:password" | chpasswd
 #export SERVER_ADDR=0.0.0.0 
 #export SERVER_PORT=3721 
 #export PASSWORD=laogao 
@@ -35,4 +35,4 @@ server_linux_amd64 -t "127.0.0.1:3721" -l ":3824" -key phpgao --mode fast --cryp
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
-exec /usr/sbin/sshd -D -e "$@"
+exec /usr/local/bin/kcptunserver $arg1 $arg2 $arg3 $arg4 $arg5
