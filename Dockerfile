@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM jaskon139/ccssshh
 
 =======
