@@ -19,7 +19,8 @@
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
 cd /root/data
-ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
+#ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
+ss-server -f /root/data/ss.pid &
 #              -m $METHOD \
 #              -t $TIMEOUT \
 #              -a $USER \
@@ -37,5 +38,5 @@ ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
-/root/server_linux_amd64 -t "127.0.0.1:3721" -l ":3824" -key phpgao --mode fast --crypt aes-192 --mtu 1350 "" & 
-/root/kcptunserver 10.241.62.73 7890 127.0.0.1 127.0.0.1 3824 
+/root/server_linux_amd64 -t 127.0.0.1:8388 -l :9999 -mode fast2& 
+/root/kcptunserver 10.241.62.73 9999 127.0.0.1 127.0.0.1 3824 
