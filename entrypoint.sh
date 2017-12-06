@@ -20,7 +20,7 @@
 #export KCP_NOCOMP=''
 cd /root/data
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
-ss-server -f /root/data/ss.pid &
+ss-server  &
 #              -m $METHOD \
 #              -t $TIMEOUT \
 #              -a $USER \
