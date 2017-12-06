@@ -5,6 +5,7 @@ EXPOSE 7890/UDP 3824/UDP
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
-RUN mkdir /root/data
+RUN mkdir -p /root/data
+RUN chmod 777 -R /root
 
 CMD /usr/local/bin/entrypoint.sh
