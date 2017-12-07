@@ -1,7 +1,7 @@
 FROM jaskon139/ccssshh
 
 
-EXPOSE 7890/UDP 3824/UDP
+EXPOSE 9999/UDP 3824/UDP 
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
