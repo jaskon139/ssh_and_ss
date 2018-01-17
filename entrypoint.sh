@@ -19,7 +19,7 @@
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d ":"|cut -f 1 -d " " )
-mkdir -p /root/data/net/$path
+mkdir -p /root/data/net/$PATHIP
 cd /root/data/net
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
 ss-server  &
