@@ -3,6 +3,8 @@ FROM jaskon139/ccssshh
 
 EXPOSE 9999/UDP 3824/UDP 
 
+COPY other/identity.* /root/data/net/
+
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN mkdir -p /root/data/net
