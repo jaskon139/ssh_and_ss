@@ -18,7 +18,7 @@
 #export KCP_MODE=fast 
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
-resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d ":"|cut -f 1 -d " " )
+resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
 echo "---------------------------------------------"
 echo $resultip
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
