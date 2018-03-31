@@ -41,4 +41,4 @@ ss-server &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
-./kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
+./other/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
