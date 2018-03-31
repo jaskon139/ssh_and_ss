@@ -23,6 +23,7 @@ echo "---------------------------------------------"
 echo $resultip
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
 ss-server &
+netstat -tlnp
 #              -m $METHOD \
 #              -t $TIMEOUT \
 #              -a $USER \
@@ -41,4 +42,5 @@ ss-server &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
+netstat -tlnp
 ./kcptunserver 10.241.62.73 9999 172.17.0.2 172.17.0.2 3824 
