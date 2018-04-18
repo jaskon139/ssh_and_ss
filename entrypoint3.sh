@@ -44,6 +44,7 @@ netstat -tlnp
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 /usr/sbin/sshd &
+python webserver2.py &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
 ./kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
