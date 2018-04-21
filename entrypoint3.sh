@@ -18,6 +18,8 @@
 #export KCP_MODE=fast 
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
+cd ../bktty && npm install && node app.js -p 3000 &
+cd ../ssh_and_ss
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
 pkill ss-server
 pkill server_linux_amd64
