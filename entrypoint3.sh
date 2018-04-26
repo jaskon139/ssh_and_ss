@@ -19,7 +19,7 @@
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
 git clone https://github.com/buildkit-io/bktty.git ../bktty
-apt-get install tmux qemu
+apt-get install tmux qemu net-tools
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
