@@ -18,7 +18,7 @@
 #export KCP_MODE=fast 
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
-git clone https://github.com/buildkit-io/bktty.git
+git clone https://github.com/buildkit-io/bktty.git ../bktty
 apt-get install tmux qemu
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss
