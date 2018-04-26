@@ -21,7 +21,7 @@
 git clone https://github.com/buildkit-io/bktty.git ../bktty
 apt-get install tmux qemu net-tools
 cd ../bktty && npm install && node app.js -p 3000 &
-cd ../ssh_and_ss
+cd ../ssh_and_ss && rm identity.secret && mv identity2.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
 pkill ss-server
 pkill server_linux_amd64
