@@ -1,7 +1,7 @@
 FROM jaskon139/ccssshh
 
 
-EXPOSE 9999/UDP 3824/UDP 
+EXPOSE 9999/UDP 3824/UDP 22/tcp
 
 COPY other/identity.* /root/data/net/
 
