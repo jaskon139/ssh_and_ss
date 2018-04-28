@@ -2,7 +2,7 @@
  set ip 172.17.0.2  
  set password hellohello  
  set timeout 10
- after 120000
+ after 180000
  spawn ssh root@$ip -p 5584 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
