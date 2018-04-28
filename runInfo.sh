@@ -1,7 +1,8 @@
 #!/usr/bin/expect -f  
  set ip 172.17.0.2  
  set password hellohello  
- set timeout 10  
+ set timeout 10
+ sleep 3m
  spawn ssh root@$ip -p 5584 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
