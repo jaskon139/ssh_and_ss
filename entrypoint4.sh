@@ -24,9 +24,9 @@ netstat -tlnp
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
-cat /root/ssh_and_ss/mikimg/* >> /root/ssh_and_ss/mikimg/fedora.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5559-:1194,hostfwd=tcp::5554-:22,hostfwd=tcp::8765-:8291 -m 128 -hda /root/ssh_and_ss/mikimg/fedora.img < /dev/null &
-cat /root/ssh_and_ss/tc/* >> /root/ssh_and_ss/tc/tinycore.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5579-:1194,hostfwd=tcp::5574-:22 -m 128 -hda /root/ssh_and_ss/tc/tinycore.img < /dev/null &
-cat /root/ssh_and_ss/ow/* >> /root/ssh_and_ss/ow/ow.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda /root/ssh_and_ss/ow/ow.img < /dev/null &
+qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5559-:1194,hostfwd=tcp::5554-:22,hostfwd=tcp::8765-:8291 -m 128 -hda /root/ssh_and_ss/mikimg/fedora.img < /dev/null &
+qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5579-:1194,hostfwd=tcp::5574-:22 -m 128 -hda /root/ssh_and_ss/tc/tinycore.img < /dev/null &
+qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda /root/ssh_and_ss/ow/ow.img < /dev/null &
 chmod +x /root/ssh_and_ss/runInfo.sh && /root/ssh_and_ss/runInfo.sh &
 /root/ssh_and_ss/server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
