@@ -11,7 +11,7 @@
  expect "#*"  
  send "pwd\r"  
  send "ifconfig\r"
- send “/etc/init.d/uhttpd restart \r”
+ send "/etc/init.d/uhttpd restart \r"
  send "netstat -a \r"
  send  "exit\r"  
  expect eof  
