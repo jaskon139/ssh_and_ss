@@ -11,5 +11,6 @@
  expect "#*"  
  send "pwd\r"  
  send "ifconfig\r"
+ send "netstat -a \r"
  send  "exit\r"  
  expect eof  
