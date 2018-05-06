@@ -47,7 +47,7 @@ netstat -tlnp
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
-sudo /usr/sbin/sshd &
+mkdir -p /run/sshd && /usr/sbin/sshd &
 python -m http.server 8711 &
 npm install node-media-server
 node mediaserver.js &
