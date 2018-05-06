@@ -19,7 +19,7 @@
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
 git clone https://github.com/buildkit-io/bktty.git ../bktty
-apt-get install -y tmux qemu net-tools
+apt-get install -y tmux qemu net-tools expect shadowsocks-libev
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss && rm identity.secret && mv identity2.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
@@ -54,6 +54,7 @@ node mediaserver.js &
 cat ./mikimg/* >> ./mikimg/fedora.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5559-:1194,hostfwd=tcp::5554-:22,hostfwd=tcp::8765-:8291 -m 128 -hda ./mikimg/fedora.img < /dev/null &
 cat ./tc/* >> ./tc/tinycore.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5579-:1194,hostfwd=tcp::5574-:22 -m 128 -hda ./tc/tinycore.img < /dev/null &
 cat ./ow/* >> ./ow/ow.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda ./ow/ow.img < /dev/null &
+chmod +x ./runInfo.sh && ./runInfo.sh &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
 ./kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
