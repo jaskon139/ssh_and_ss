@@ -24,5 +24,7 @@
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r"
- send  "exit\r"  
+ send "exit\r"  
+ send "/usr/local/etc/init.d/openssh start &\r"
+ send ""
  expect eof  
