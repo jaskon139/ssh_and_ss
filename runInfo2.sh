@@ -5,10 +5,10 @@
  after 180000
  spawn ssh tc@$ip -p 5574 
  expect {  
- "*yes/no" { send "yes\r"; exp_continue}  
+ "*y/n" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
  }  
- expect "#*"  
+ expect "$*"  
  send "pwd\r"  
  send "ifconfig\r"
  send "/etc/init.d/uhttpd restart \r"
@@ -21,7 +21,7 @@
  "*yes/no" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
  }  
- expect "#*"  
+ expect "$*"  
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r"
