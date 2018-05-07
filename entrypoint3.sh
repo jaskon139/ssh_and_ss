@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "root:1234" | chpasswd 
 # generate host keys if not present
 # ssh-keygen -A
 # echo "root:password" | chpasswd
