@@ -12,7 +12,7 @@
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r"
- send "sudo sed -i -E \\\"s/#GatewayPorts no/$GatewayPorts yes/\\\" /usr/local/etc/ssh/sshd_config"
+ send "sudo sed -i -E \\\"s/#GatewayPorts no/GatewayPorts yes/\\\" /usr/local/etc/ssh/sshd_config"
  send "/usr/local/etc/init.d/openssh start &\r"
  send  "exit\r"  
  expect eof  
