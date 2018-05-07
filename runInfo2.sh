@@ -11,14 +11,13 @@
  expect "$*"  
  send "pwd\r"  
  send "ifconfig\r"
- send "/etc/init.d/uhttpd restart \r"
  send "netstat -a \r"
  send  "exit\r"  
  expect eof  
  after 180000
- spawn ssh root@$ip -p 5584 
+ spawn ssh tc@$ip -p 5574 
  expect {  
- "*yes/no" { send "yes\r"; exp_continue}  
+ "*y/n" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
  }  
  expect "$*"  
