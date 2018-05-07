@@ -5,7 +5,7 @@
  after 180000
  spawn ssh tc@$ip -p 5574 
  expect {  
- "*y/n" { send "yes\r"; exp_continue}  
+ "*yes/no" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
  }  
  expect "$*"  
@@ -19,7 +19,7 @@
  after 180000
  spawn ssh tc@$ip -p 5574 
  expect {  
- "*y/n" { send "yes\r"; exp_continue}  
+ "*yes/no" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
  }  
  expect "$*"  
