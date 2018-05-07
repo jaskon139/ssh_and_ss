@@ -3,7 +3,7 @@
  set password Hellohello@2000  
  set timeout 10
  after 180000
- spawn ssh root@$ip -p 5574 
+ spawn ssh tc@$ip -p 5574 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
  "*password:" { send "$password\r" }  
