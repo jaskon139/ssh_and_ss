@@ -16,7 +16,7 @@
  send "/usr/local/etc/init.d/openssh start &\r"
  send  "exit\r"  
  expect eof  
- after 180000
+ after 1800
  spawn ssh tc@$ip -p 5574 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
