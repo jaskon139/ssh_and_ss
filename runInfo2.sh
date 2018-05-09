@@ -13,7 +13,7 @@
  send "ifconfig\r"
  send "netstat -a \r"
  send "sudo sed -i -E \"s/#GatewayPorts no/GatewayPorts yes/\" /usr/local/etc/ssh/sshd_config\r"
- send "/usr/local/etc/init.d/openssh start &\r"
+ send "sudo /usr/local/etc/init.d/openssh start &\r"
  send  "exit\r"  
  expect eof  
  after 1800
