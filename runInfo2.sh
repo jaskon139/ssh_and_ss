@@ -26,7 +26,6 @@
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r" 
- send "screen -S ttt \r" 
  send "ssh -L 0.0.0.0:3000:172.17.0.2:3000 apple@172.17.0.2 \r" 
  expect eof
  
@@ -34,7 +33,8 @@
  "*yes/no" { send "yes\r"; exp_continue}  
  "*password:" { send "hellohello\r" }  
  }  
- expect "$*"  
+ expect "$*"   
+ send "screen -S ttt \r" 
  send "top\r"  
  send "\x01"
  send "d"
