@@ -39,5 +39,6 @@
  send "\x01"
  send "d"
  send "exit\r"
+ send "netstat -a \r" 
  send "exit\r"
  expect eof  
