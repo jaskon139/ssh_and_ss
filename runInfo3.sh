@@ -1,5 +1,5 @@
 apt-get install aria2
-aria2 --config=./configuaria2.conf
+aria2c --conf-path=./configuaria2.conf -D
 mkdir -p /home/apple
 useradd -m -s /bin/bash apple
 chmod +x ./change-pwd-expect.sh
