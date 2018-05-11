@@ -20,7 +20,6 @@ echo "root:1234" | chpasswd
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
 git clone https://github.com/buildkit-io/bktty.git ../bktty 
-git clone https://github.com/mixuala/colab_utils.git ../colab_utils
 apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss && rm identity.secret && mv identity2.secret identity.secret
