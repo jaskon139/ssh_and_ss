@@ -40,6 +40,8 @@ netstat -tlnp
 #              --mtu $KCP_MUT \
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
+apt-get install openssh-server
+mkdir -p /run/sshd && /usr/sbin/sshd &
 
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
