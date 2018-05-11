@@ -41,6 +41,7 @@ netstat -tlnp
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 apt-get install openssh-server expect
+sed -e 's/without-password/yes/g' /etc/ssh/sshd_config
 mkdir -p /run/sshd && /usr/sbin/sshd &
 chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh root hellohello
 
