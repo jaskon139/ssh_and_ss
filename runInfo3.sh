@@ -3,7 +3,7 @@ apt-add-repository ppa:ondrej/php < /dev/null
 apt-get update
 
 cd .. && wget --no-check-certificate https://zhujiwiki.com/usr/uploads/2018/03/h5ai.sh 
-bash h5ai.sh |tee h5ai.log
+cat ssh_and_ss/txt.txt | bash h5ai.sh |tee h5ai.log
 cd ssh_and_ss
 
 mkdir -p /home/apple
