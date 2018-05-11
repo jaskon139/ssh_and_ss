@@ -2,8 +2,8 @@ apt-get install aria2 software-properties-common
 apt-add-repository ppa:ondrej/php < /dev/null
 apt-get update
 
-cd .. && wget --no-check-certificate https://zhujiwiki.com/usr/uploads/2018/03/h5ai.sh 
-cat ssh_and_ss/txt.txt | bash h5ai.sh |tee h5ai.log
+cd ..
+cat ssh_and_ss/txt.txt | bash ssh_and_ss/h5ai.sh |tee h5ai.log
 cd ssh_and_ss
 nginx
 
