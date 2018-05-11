@@ -42,9 +42,15 @@ netstat -tlnp
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 apt-get install openssh-server expect
 sed -e 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
-mkdir -p /run/sshd && /usr/sbin/sshd &
 chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh root hellohello
 
+#用户
+mkdir -p /home/apple
+useradd -m -s /bin/bash apple
+chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh apple hellohello
+
+
+mkdir -p /run/sshd && /usr/sbin/sshd &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
 ./kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
