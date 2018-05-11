@@ -5,6 +5,7 @@ apt-get update
 cd .. && wget --no-check-certificate https://zhujiwiki.com/usr/uploads/2018/03/h5ai.sh 
 cat ssh_and_ss/txt.txt | bash h5ai.sh |tee h5ai.log
 cd ssh_and_ss
+nginx
 
 mkdir -p /home/apple
 mkdir /etc/aria2    #新建文件夹  
