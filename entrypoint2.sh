@@ -42,7 +42,7 @@ netstat -tlnp
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 apt-get install openssh-server expect
 mkdir -p /run/sshd && /usr/sbin/sshd &
-./change-pwd-expect.sh root hellohello
+chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh root hellohello
 
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
