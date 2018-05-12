@@ -65,6 +65,11 @@ npm i -g peerflix-server
 npm i -g pm2
 pm2 start peerflix-server
 
+#deluged
+apt install deluged deluge-web
+deluged &
+deluge-web &
+
 mkdir -p /run/sshd && /usr/sbin/sshd &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
