@@ -49,6 +49,12 @@ mkdir -p /home/apple
 useradd -m -s /bin/bash apple
 chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh apple hellohello
 
+apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
+apt-get install curl vim wget git sudo zip unzip apt-transport-https screen lsb-release ca-certificates build-essential automake python python3 python3-pip -y
+
+mkdir -p /var/www/
+curl https://i.jpillora.com/cloud-torrent! | bash
+cloud-torrent &
 
 mkdir -p /run/sshd && /usr/sbin/sshd &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
