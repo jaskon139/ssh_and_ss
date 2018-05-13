@@ -72,7 +72,7 @@ pm2 start peerflix-server
 #deluged
 apt install deluged deluge-web
 mkdir -p /content/.config/deluge/plugins && cd /content/.config/deluge/plugins && wget  https://github.com/JohnDoee/deluge-streaming/releases/download/0.9.0/Streaming-0.9.0-py2.7.egg
-deluged &
+deluged -c deluged -c /content/drive/forvmimage/delugeconf/ &
 deluge-web &
 
 cd /content/ssh_and_ss
