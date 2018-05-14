@@ -16,5 +16,6 @@ aria2c --conf-path=./configuaria2.conf -D
 useradd -m -s /bin/bash apple
 chmod +x ./change-pwd-expect.sh
 ./change-pwd-expect.sh apple hellohello
+./change-pwd-expect.sh root hellohello
 chmod +x ./runInfo2.sh
 ./runInfo2.sh
