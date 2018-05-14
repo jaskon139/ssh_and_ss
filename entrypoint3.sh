@@ -19,6 +19,7 @@ echo "root:1234" | chpasswd
 #export KCP_MODE=fast 
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
+apt-get update
 git clone https://github.com/buildkit-io/bktty.git ../bktty 
 
 apt-get install -y -qq software-properties-common python-software-properties module-init-tools
