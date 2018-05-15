@@ -28,7 +28,7 @@ apt-get update -qq 2>&1 > /dev/null
 apt-get -y install -qq google-drive-ocamlfuse fuse
 tar xvf ./gddrive.tar -C ~
 mkdir -p ~/drive
-google-drive-ocamlfuse ~/drive
+google-drive-ocamlfuse ~/drive -o nonempty
 
 apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen
 cd ../bktty && npm install && node app.js -p 3000 &
