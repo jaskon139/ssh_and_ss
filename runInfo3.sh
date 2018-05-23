@@ -5,6 +5,7 @@ apt-get update
 cd ..
 cat ssh_and_ss/txt.txt | bash ssh_and_ss/h5ai.sh |tee h5ai.log
 cd ssh_and_ss
+cp nginxdefault /etc/nginx/sites-available/default
 nginx
 
 mkdir -p /home/apple
