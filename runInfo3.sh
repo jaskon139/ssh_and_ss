@@ -2,6 +2,10 @@ apt-get install aria2 software-properties-common
 apt-add-repository ppa:ondrej/php < /dev/null
 apt-get update
 
+apt-get install ruby
+git clone https://github.com/luizluca/bridge.git ../bridge
+ruby ../bridge/bridge 8090 /c
+
 cd ..
 cat ssh_and_ss/txt.txt | bash ssh_and_ss/h5ai.sh |tee h5ai.log
 cd ssh_and_ss
