@@ -83,7 +83,7 @@ apt install deluged deluge-web
 mkdir -p /content/delugeconf
 cp -fr /content/drive/forvmimage/delugeconf/* /content/delugeconf
 deluged -c /content/delugeconf/ &
-deluge-web -c /content/delugeconf/  &
+deluge-web -c /content/delugeconf/  --base /deluge/ &
 
 cd /content/ssh_and_ss
 mkdir -p /run/sshd && /usr/sbin/sshd &
