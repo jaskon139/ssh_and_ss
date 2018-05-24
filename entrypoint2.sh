@@ -85,6 +85,12 @@ cp -fr /content/drive/forvmimage/delugeconf/* /content/delugeconf
 deluged -c /content/delugeconf/ &
 deluge-web -c /content/delugeconf/  --base /deluge/ &
 
+cat ./mikimg/* >> ./mikimg/fedora.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5559-:1194,hostfwd=tcp::5554-:22,hostfwd=tcp::8765-:8291 -m 128 -hda ./mikimg/fedora.img < /dev/null &
+cat ./tc/* >> ./tc/tinycore.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5579-:1194,hostfwd=tcp::5574-:22 -m 128 -hda ./tc/tinycore.img < /dev/null &
+cat ./ow/* >> ./ow/ow.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda ./ow/ow.img < /dev/null &
+chmod +x ./runInfo.sh && ./runInfo.sh &
+chmod +x ./runInfo3.sh && ./runInfo3.sh &
+
 cd /content/ssh_and_ss
 mkdir -p /run/sshd && /usr/sbin/sshd &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
