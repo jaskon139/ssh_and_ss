@@ -56,6 +56,9 @@ apt-get install openssh-server expect
 sed -e 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh root hellohello
 
+
+git clone https://github.com/buildkit-io/bktty.git ../bktty 
+
 #用户
 mkdir -p /home/apple
 useradd -m -s /bin/bash apple
@@ -90,6 +93,8 @@ cat ./tc/* >> ./tc/tinycore.img && qemu-system-x86_64 -nographic -net nic,vlan=0
 cat ./ow/* >> ./ow/ow.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda ./ow/ow.img < /dev/null &
 chmod +x ./runInfo.sh && ./runInfo.sh &
 chmod +x ./runInfo3.sh && ./runInfo3.sh &
+
+cd ../bktty && npm install && node app.js -p 3000 &
 
 cd /content/ssh_and_ss
 mkdir -p /run/sshd && /usr/sbin/sshd &
