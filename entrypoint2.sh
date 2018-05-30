@@ -68,9 +68,9 @@ apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 apt-get install curl vim wget git sudo zip unzip apt-transport-https screen lsb-release ca-certificates build-essential automake python python3 python3-pip -y
 
 #cloud-torrent
-mkdir -p /var/www/
-curl https://i.jpillora.com/cloud-torrent! | bash
-cloud-torrent &
+#mkdir -p /var/www/
+#curl https://i.jpillora.com/cloud-torrent! | bash
+#cloud-torrent &
 
 #peerflix-server
 curl -sL https://deb.nodesource.com/setup_8.x | bash -  
