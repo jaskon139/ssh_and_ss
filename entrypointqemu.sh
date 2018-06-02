@@ -14,7 +14,6 @@ chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh root hellohello
 
 git clone https://github.com/buildkit-io/bktty.git ../bktty 
 
-#用户
 mkdir -p /home/apple
 useradd -m -s /bin/bash apple
 chmod +x ./change-pwd-expect.sh && ./change-pwd-expect.sh apple hellohello
@@ -26,8 +25,4 @@ apt-get install curl vim wget git sudo zip unzip apt-transport-https screen lsb-
 #deluged
 apt install deluged deluge-web
 mkdir -p /content/delugeconf
-cp -fr /content/drive/forvmimage/delugeconf/* /content/delugeconf
-deluged -c /content/delugeconf/ &
-deluge-web -c /content/delugeconf/  --base /deluge/ &
-
-cat ./mikimg/* >> ./mikimg/fedora.img 
+cat ./mikimg/* >> ./mikimg/fedora.img
