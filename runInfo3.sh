@@ -7,17 +7,17 @@ git clone https://github.com/luizluca/bridge.git ../bridge
 ruby ../bridge/bridge 8090 /c &
 
 cd ..
-cat ssh_and_ss/txt.txt | bash ssh_and_ss/h5ai.sh |tee h5ai.log
-cd ssh_and_ss
+#cat ssh_and_ss/txt.txt | bash ssh_and_ss/h5ai.sh |tee h5ai.log
+#cd ssh_and_ss
 cp nginxdefault /etc/nginx/sites-available/default
 nginx
 
 mkdir -p /home/apple
-mkdir /etc/aria2    #新建文件夹  
-touch /etc/aria2/aria2.session    #新建session文件
-chmod 777 /etc/aria2/aria2.session    #设置aria2.session可写 
-cp ./configuaria2.conf /etc/aria2/aria2.conf    #创建配置文件
-aria2c --conf-path=./configuaria2.conf -D
+#mkdir /etc/aria2    #新建文件夹  
+#touch /etc/aria2/aria2.session    #新建session文件
+#chmod 777 /etc/aria2/aria2.session    #设置aria2.session可写 
+#cp ./configuaria2.conf /etc/aria2/aria2.conf    #创建配置文件
+#aria2c --conf-path=./configuaria2.conf -D
 useradd -m -s /bin/bash apple
 chmod +x ./change-pwd-expect.sh
 ./change-pwd-expect.sh apple hellohello
