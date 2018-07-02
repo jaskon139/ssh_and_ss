@@ -1,5 +1,5 @@
 #!/usr/bin/expect -f  
- set ip 172.17.0.2  
+ set ip localhost
  set password Hellohello@2000  
  set timeout 10
  after 180000
@@ -26,7 +26,7 @@
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r" 
- send "ssh apple@172.17.0.2 \r" 
+ send "ssh apple@localhost \r" 
  expect eof 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
@@ -34,7 +34,7 @@
  }  
  expect "$*"   
  send "screen -S ttt \r" 
- send "ssh -R 0.0.0.0:7080:172.17.0.2:7080 tc@172.17.0.2 -p 5574\r"  
+ send "ssh -R 0.0.0.0:7080:127.0.0.1:7080 tc@localhost -p 5574\r"  
  expect eof 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
