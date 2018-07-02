@@ -1,5 +1,5 @@
 #!/usr/bin/expect -f  
- set ip 172.17.0.2  
+ set ip localhost 
  set password hellohello  
  set timeout 10
  after 180000
