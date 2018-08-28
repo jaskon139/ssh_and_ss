@@ -19,8 +19,18 @@ echo "root:1234" | chpasswd
 #export KCP_MODE=fast 
 #export KCP_MUT=1350 
 #export KCP_NOCOMP=''
+apt-get update
 git clone https://github.com/buildkit-io/bktty.git ../bktty 
-apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass
+
+apt-get install -y -qq software-properties-common python-software-properties module-init-tools
+add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
+apt-get update -qq 2>&1 > /dev/null
+apt-get -y install -qq google-drive-ocamlfuse fuse
+tar xvf ./gddrive.tar -C ~
+mkdir -p ~/drive
+google-drive-ocamlfuse ~/drive -o nonempty
+
+apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss && rm identity.secret && mv identity2.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
@@ -50,8 +60,8 @@ netstat -tlnp
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 mkdir -p /run/sshd && /usr/sbin/sshd &
 python -m http.server 8711 &
-npm install node-media-server
-node mediaserver.js &
+#npm install node-media-server
+#node mediaserver.js &
 cat ./mikimg/* >> ./mikimg/fedora.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5559-:1194,hostfwd=tcp::5554-:22,hostfwd=tcp::8765-:8291 -m 128 -hda ./mikimg/fedora.img < /dev/null &
 cat ./tc/* >> ./tc/tinycore.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5579-:1194,hostfwd=tcp::5574-:22 -m 128 -hda ./tc/tinycore.img < /dev/null &
 cat ./ow/* >> ./ow/ow.img && qemu-system-x86_64 -nographic -net nic,vlan=0 -net user,hostfwd=tcp::5989-:80,hostfwd=tcp::5589-:1194,hostfwd=tcp::5584-:22 -m 128 -hda ./ow/ow.img < /dev/null &
