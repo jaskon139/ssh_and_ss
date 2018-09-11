@@ -32,7 +32,7 @@ google-drive-ocamlfuse ~/drive -o nonempty
 
 apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen
 cd ../bktty && npm install && node app.js -p 3000 &
-cd ../ssh_and_ss && rm identity.secret && mv identity2.secret identity.secret
+cd ../ssh_and_ss && rm identity.secret && mv identity3.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
 pkill ss-server
 pkill server_linux_amd64
