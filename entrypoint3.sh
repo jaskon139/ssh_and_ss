@@ -38,7 +38,7 @@ pkill ss-server
 pkill server_linux_amd64
 pkill kcptunserver
 pkill shadowsocks-server-linux64-1.1.5
-chmod +x gotty && gotty --port 8711 --permit-write --reconnect /bin/bash &
+chmod +x gotty && gotty --port 8771 --permit-write --reconnect /bin/bash &
 echo "---------------------------------------------"
 echo $resultip
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
