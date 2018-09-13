@@ -43,6 +43,7 @@ echo "---------------------------------------------"
 echo $resultip
 #ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
 #ss-server -c ./ss-configcodeing.json &
+chmod +x ./*.sh
 chmod +x ./shadowsocks-server-linux64-1.1.5 && ./shadowsocks-server-linux64-1.1.5 -c ./ss-configcodeing.json &
 netstat -tlnp
 #              -m $METHOD \
