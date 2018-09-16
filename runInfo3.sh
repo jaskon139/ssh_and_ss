@@ -18,6 +18,7 @@ mkdir -p /home/apple
 #cp ./configuaria2.conf /etc/aria2/aria2.conf    #创建配置文件
 #aria2c --conf-path=./configuaria2.conf -D
 useradd -m -s /bin/bash apple
+chown apple /home/apple
 
 chmod +x ./change-pwd-expect.sh
 ./change-pwd-expect.sh apple hellohello
