@@ -34,7 +34,7 @@
  }  
  expect "$*"   
  send "screen -S ttt \r" 
- send "ssh -R 0.0.0.0:7080:localhost:7080 tc@localhost -p 5574\r"  
+ send "ssh -R 0.0.0.0:7080:localhost:8771 tc@localhost -p 5574\r"  
  expect eof 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
