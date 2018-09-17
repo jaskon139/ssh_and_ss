@@ -26,7 +26,7 @@
  send "pwd\r"  
  send "ifconfig\r"
  send "netstat -a \r" 
- send "ssh apple@localhost \r" 
+ send "ssh apple@172.28.0.2 \r" 
  expect eof 
  expect {  
  "*yes/no" { send "yes\r"; exp_continue}  
