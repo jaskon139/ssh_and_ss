@@ -1,5 +1,4 @@
-apt install deluged deluge-web
-mkdir -p /content/delugeconf
-cp -fr ~/drive/forvmimage/delugeconf/* /content/delugeconf
-deluged -c /content/delugeconf/ &
-deluge-web -c /content/delugeconf/ &
+wget https://github.com/jpillora/cloud-torrent/releases/download/0.8.25/cloud-torrent_linux_amd64.gz
+gunzip cloud-torrent_linux_amd64.gz
+chmod +x cloud-torrent_linux_amd64
+./cloud-torrent_linux_amd64 --port 8310 &
