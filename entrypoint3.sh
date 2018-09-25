@@ -30,7 +30,7 @@ tar xvf ./gddrive.tar -C ~
 mkdir -p ~/drive
 google-drive-ocamlfuse ~/drive -o nonempty
 
-apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen
+apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen vim
 cd ../bktty && npm install && node app.js -p 3000 &
 cd ../ssh_and_ss && rm identity.secret && mv identity3.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
