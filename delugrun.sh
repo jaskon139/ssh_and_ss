@@ -1,4 +1,4 @@
-wget https://github.com/jpillora/cloud-torrent/releases/download/0.8.25/cloud-torrent_linux_amd64.gz
-gunzip cloud-torrent_linux_amd64.gz
-chmod +x cloud-torrent_linux_amd64
-./cloud-torrent_linux_amd64 --port 8310 &
+git clone https://github.com/webtorrent/webtorrent-cli
+export PATH=/tool/node/bin:$PATH
+cd webtorrent-cli
+npm install
