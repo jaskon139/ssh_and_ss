@@ -1,13 +1,18 @@
-name: voting-app
 services:
-  vote:
+  openwrt:
     public: true
-    image: jaskon139/oktetofortest
-    build: vote
+    image: jaskon139/ssh_and_ss
     replicas: 1
     ports:
-      - 80
+      - 8089 
     resources:
-      cpu: 100m
-      memory: 1024Mi
-
+      cpu: 250m
+      memory: 2048Mi
+      storage: 1Gi
+    volumes:
+      - /data
+securityContext:
+  capabilities:
+    add:
+    - NET_ADMIN
+    - SYS_ADMIN 
