@@ -40,7 +40,7 @@ ss-server  -c /root/data2/ss-configcodeing.json &
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
-/bin/sh /root/data2/other/rungit.sh &
+cd /root/data2/other/ && /bin/sh /root/data2/other/rungit.sh &
 
 /root/data2/server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 /root/data2/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 &
