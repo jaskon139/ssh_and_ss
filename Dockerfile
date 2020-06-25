@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
-RUN apt update && apt -y install shadowsocks-libev net-tools
-
+RUN apt update && apt -y install shadowsocks-libev net-tools curl
+RUN curl https://get.okteto.com -sSfL | sh
 
 EXPOSE 9999/UDP 3824/UDP 22/tcp 8089/tcp 
 
