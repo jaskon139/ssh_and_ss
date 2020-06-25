@@ -11,8 +11,3 @@ services:
       storage: 1Gi
     volumes:
       - /data
-securityContext:
-  capabilities:
-    add:
-    - NET_ADMIN
-    - SYS_ADMIN 
