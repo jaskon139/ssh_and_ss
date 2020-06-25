@@ -12,7 +12,7 @@ RUN mkdir /root/data2/
 RUN mkdir /root/data2/other
 
 COPY * /root/data2/
-COPY /other/* /root/data2/other
+COPY /other/* /root/data2/other/
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
