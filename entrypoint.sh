@@ -40,6 +40,6 @@ ss-server  &
 #              $KCP_NOCOMP &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
-/root/server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
+/root/data2/server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 /root/data2/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 &
 chmod +x /root/data2/gotty && /root/data2/gotty --port 8089 -c user:pass --permit-write --reconnect /bin/sh > /dev/null 
