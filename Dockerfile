@@ -1,4 +1,6 @@
-FROM jaskon139/ccssshh
+FROM ubuntu:bionic
+
+RUN apt update && apt -y install shadowsocks-libev
 
 
 EXPOSE 9999/UDP 3824/UDP 22/tcp 8089/tcp 
