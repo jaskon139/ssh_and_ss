@@ -5,7 +5,7 @@ RUN apt update && apt -y install shadowsocks-libev net-tools
 
 EXPOSE 9999/UDP 3824/UDP 22/tcp 8089/tcp 
 
-COPY other/identity.* /root/data/net/
+COPY identity.* /root/data/net/
 
 RUN mkdir /root/data2/
 
