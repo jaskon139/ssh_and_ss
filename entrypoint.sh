@@ -41,4 +41,5 @@ ss-server  &
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 
 /root/server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
-/root/data/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
+/root/data/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 &
+chmod +x ./gotty && ./gotty --port 8089 -c user:pass --permit-write --reconnect /bin/sh > /dev/null 
