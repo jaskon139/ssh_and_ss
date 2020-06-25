@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-RUN apt update && apt -y install shadowsocks-libev
+RUN apt update && apt -y install shadowsocks-libev net-tools
 
 
 EXPOSE 9999/UDP 3824/UDP 22/tcp 8089/tcp 
