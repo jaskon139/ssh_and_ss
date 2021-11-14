@@ -1,26 +1,5 @@
 #!/bin/sh
 echo "root:1234" | chpasswd 
-# generate host keys if not present
-# ssh-keygen -A
-# echo "root:password" | chpasswd
-#export SERVER_ADDR=0.0.0.0 
-#export SERVER_PORT=3721 
-#export PASSWORD=laogao 
-#export METHOD=aes-256-cfb 
-#export TIMEOUT=300 
-#export FASTOPEN=--fast-open 
-#export UDP_RELAY=-u 
-#export USER=nobody 
-#export DNS_ADDR=8.8.8.8 
-#export DNS_ADDR_2=8.8.4.4
-#export ENV KCP_LISTEN=3824 
-#export KCP_PASS=phpgao 
-#export KCP_ENCRYPT=aes-192 
-#export KCP_MODE=fast 
-#export KCP_MUT=1350 
-#export KCP_NOCOMP=''
-#apt-get update
-#git clone https://github.com/buildkit-io/bktty.git ../bktty 
 
 #apt-get install -y -qq software-properties-common python-software-properties module-init-tools
 #add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
@@ -30,19 +9,14 @@ echo "root:1234" | chpasswd
 #mkdir -p ~/drive
 #google-drive-ocamlfuse ~/drive -o nonempty
 
-apt-get install -y tmux qemu net-tools expect shadowsocks-libev openssh-server sshpass tmux screen vim
-#cd ../bktty && npm install && node app.js -p 3000 &
+apt-get install -y tmux qemu net-tools expect openssh-server sshpass tmux screen vim
 cd ../ssh_and_ss && rm identity.secret && mv identity3.secret identity.secret
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" )
-pkill ss-server
 pkill server_linux_amd64
 pkill kcptunserver
 pkill shadowsocks-server-linux64-1.1.5
-chmod +x ./gotty && ./gotty --port 8771 --permit-write --reconnect /bin/bash &
 echo "---------------------------------------------"
 echo $resultip
-#ss-server -s 0.0.0.0 -p 3721 -k laogao -m aes-256-cfb -t 300 -d 8.8.8.8 -d 8.8.4.4 -u -f /root/data/ss.pid &
-#ss-server -c ./ss-configcodeing.json &
 chmod +x ./*.sh
 chmod +x ./shadowsocks-server-linux64-1.1.5 && ./shadowsocks-server-linux64-1.1.5 -c ./ss-configcodeing.json &
 netstat -tlnp
