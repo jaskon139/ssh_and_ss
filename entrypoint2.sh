@@ -100,4 +100,5 @@ cd /content/ssh_and_ss
 mkdir -p /run/sshd && /usr/sbin/sshd &
 ./server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2& 
 netstat -tlnp
+chmod +x ./kcptunserver
 ./kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 
