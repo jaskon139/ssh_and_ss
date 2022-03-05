@@ -20,3 +20,8 @@ echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
 echo "git clone https://github.com/jaskon139/SagerNet.git"
 
 echo "git submodule update --init --recursive"
+
+
+mkdir gopath
+
+export GOPATH=/home/apple/gopath
