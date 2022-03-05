@@ -5,3 +5,11 @@
  export ANDROID_HOME=/home/apple/androidhome 
  
  yes | /home/apple/androidhome/cmdline-tools/5.0/bin/sdkmanager --license
+ 
+ wget https://go.dev/dl/go1.16.10.linux-amd64.tar.gz
+ 
+ tar xvf go1.16.10.linux-amd64.tar.gz
+
+export GOROOT=/home/apple/go
+
+export PATH=$GOROOT/bin:$PATH
