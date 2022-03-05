@@ -13,3 +13,8 @@
 export GOROOT=/home/apple/go
 
 export PATH=$GOROOT/bin:$PATH
+
+
+echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
+
+echo "git clone https://github.com/jaskon139/SagerNet.git"
