@@ -6,7 +6,7 @@
  
  sed -i 's/127.0.0.1:8080/0.0.0.0:9080/g' ~/.config/code-server/config.yaml 
  
- code-server --config ~/.config/code-server/config.yaml2 & 
+ code-server & 
  
  export ANDROID_HOME=/home/apple/androidhome 
  
