@@ -4,6 +4,10 @@
  
  curl -fsSL https://code-server.dev/install.sh | sh
  
+ sed -e 's/127.0.0.1:8080/0.0.0.0:9080/' ~/.config/code-server/config.yaml
+ 
+ code-server & 
+ 
  export ANDROID_HOME=/home/apple/androidhome 
  
  export ANDROID_SDK_ROOT=$ANDROID_HOME
@@ -34,4 +38,4 @@ mkdir gopath
 
 export GOPATH=/home/apple/gopath
 
-code-server
+
