@@ -4,9 +4,9 @@
  
  curl -fsSL https://code-server.dev/install.sh | sh
  
- sed -e 's/127.0.0.1:8080/0.0.0.0:9080/' ~/.config/code-server/config.yaml
+ sed -e 's/127.0.0.1:8080/0.0.0.0:9080/' ~/.config/code-server/config.yaml > ~/.config/code-server/config.yaml2
  
- code-server & 
+ code-server --config ~/.config/code-server/config.yaml2 & 
  
  export ANDROID_HOME=/home/apple/androidhome 
  
