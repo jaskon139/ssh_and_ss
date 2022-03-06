@@ -2,6 +2,8 @@
  
  /content/cmdline-tools/bin/sdkmanager --sdk_root=/home/apple/androidhome "cmdline-tools;5.0"
  
+ curl -fsSL https://code-server.dev/install.sh | sh
+ 
  export ANDROID_HOME=/home/apple/androidhome 
  
  export ANDROID_SDK_ROOT=$ANDROID_HOME
@@ -31,3 +33,5 @@ echo "./run lib core"
 mkdir gopath
 
 export GOPATH=/home/apple/gopath
+
+code-server
