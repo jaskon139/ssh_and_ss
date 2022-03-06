@@ -6,6 +6,13 @@
  
  sed -i 's/127.0.0.1:8080/0.0.0.0:9080/g' ~/.config/code-server/config.yaml 
  
+ rm -f ~/.config/code-server/config.yaml
+ 
+ echo "bind-addr: 127.0.0.1:8080" >> ~/.config/code-server/config.yaml 
+ echo "auth: password" >> ~/.config/code-server/config.yaml 
+ echo "password: Hellohello@2000" >>  ~/.config/code-server/config.yaml 
+ echo "cert: false" >>  ~/.config/code-server/config.yaml 
+ 
  code-server & 
  
  export ANDROID_HOME=/home/apple/androidhome 
