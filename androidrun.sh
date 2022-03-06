@@ -23,6 +23,10 @@ echo "git clone https://github.com/jaskon139/SagerNet.git"
 
 echo "git submodule update --init --recursive"
 
+echo "./gradlew app:assembleOssRelease"
+
+echo "./run lib core"
+
 
 mkdir gopath
 
