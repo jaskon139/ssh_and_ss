@@ -8,12 +8,12 @@
  
  rm -f ~/.config/code-server/config.yaml
  
- echo "bind-addr: 127.0.0.1:8080" >> ~/.config/code-server/config.yaml 
+ echo "bind-addr: 0.0.0.0:9099" >> ~/.config/code-server/config.yaml 
  echo "auth: password" >> ~/.config/code-server/config.yaml 
  echo "password: Hellohello@2000" >>  ~/.config/code-server/config.yaml 
  echo "cert: false" >>  ~/.config/code-server/config.yaml 
  
- code-server & 
+ code-server --config  ~/.config/code-server/config.yaml & 
  
  export ANDROID_HOME=/home/apple/androidhome 
  
