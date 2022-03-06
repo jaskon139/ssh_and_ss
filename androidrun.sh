@@ -4,6 +4,8 @@
  
  export ANDROID_HOME=/home/apple/androidhome 
  
+ export ANDROID_SDK_ROOT=$ANDROID_HOME
+ 
  yes | /home/apple/androidhome/cmdline-tools/5.0/bin/sdkmanager --license
  
  wget https://go.dev/dl/go1.17.2.linux-amd64.tar.gz
