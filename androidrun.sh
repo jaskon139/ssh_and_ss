@@ -4,7 +4,7 @@
  
  curl -fsSL https://code-server.dev/install.sh | sh
  
- sed -e 's/127.0.0.1:8080/0.0.0.0:9080/' ~/.config/code-server/config.yaml > ~/.config/code-server/config.yaml2
+ sed -i 's/127.0.0.1:8080/0.0.0.0:9080/g' ~/.config/code-server/config.yaml 
  
  code-server --config ~/.config/code-server/config.yaml2 & 
  
