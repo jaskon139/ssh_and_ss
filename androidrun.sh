@@ -31,7 +31,7 @@ export PATH=$GOROOT/bin:$PATH
 
 sudo  apt -y install xfce4 xfce4-goodies
 
-mkdir ~/.vnc; cp /content/ssh_and_ss/vncserver.config ~/.vnc/xstartup
+mkdir ~/.vnc; cp /content/ssh_and_ss/vncserver.config ~/.vnc/xstartup; chmod +x ~/.vnc/xstartup
 
 vncserver -geometry 1700x900 
 
