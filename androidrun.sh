@@ -29,7 +29,7 @@ export GOROOT=/home/apple/go
 
 export PATH=$GOROOT/bin:$PATH
 
-sudo apt install vnc* gnome-core gnome-panel
+sudo  apt -y install xfce4 xfce4-goodies
 
 mkdir ~/.vnc; cp /content/ssh_and_ss/vncserver.config ~/.vnc/xstartup
 
