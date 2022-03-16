@@ -42,6 +42,7 @@ echo "./gradlew app:assembleOssRelease"
 
 echo "./run lib core"
 
+sudo apt install vnc* gnome-core
 
 mkdir gopath
 
