@@ -13,7 +13,7 @@
  echo "password: Hellohello@2000" >>  ~/.config/code-server/config.yaml 
  echo "cert: false" >>  ~/.config/code-server/config.yaml 
  
- code-server --config  ~/.config/code-server/config.yaml & 
+ code-server --config  ~/.config/code-server/config.yaml &  
  
  export ANDROID_HOME=/home/apple/androidhome 
  
@@ -33,6 +33,8 @@ export PATH=$GOROOT/bin:$PATH
 echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
 
 echo "git clone https://github.com/jaskon139/SagerNet.git"
+
+vncserver :1
 
 echo "git submodule update --init --recursive"
 
