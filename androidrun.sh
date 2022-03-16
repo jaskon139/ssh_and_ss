@@ -40,6 +40,13 @@ cp vncserver.config ~/.vnc/xstartup
 
 vncserver :1
 
+
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
+wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/android-studio-2021.1.1.22-linux.tar.gz
+
+tar xvf android-studio-2021.1.1.22-linux.tar.gz
+
 echo "git submodule update --init --recursive"
 
 echo "./gradlew app:assembleOssRelease"
