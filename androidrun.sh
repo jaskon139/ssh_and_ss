@@ -34,6 +34,10 @@ echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
 
 echo "git clone https://github.com/jaskon139/SagerNet.git"
 
+sudo apt install vnc* gnome-core
+
+cp vncserver.config ~/.vnc/xstartup
+
 vncserver :1
 
 echo "git submodule update --init --recursive"
@@ -42,7 +46,7 @@ echo "./gradlew app:assembleOssRelease"
 
 echo "./run lib core"
 
-sudo apt install vnc* gnome-core
+
 
 mkdir gopath
 
