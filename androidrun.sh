@@ -29,17 +29,11 @@ export GOROOT=/home/apple/go
 
 export PATH=$GOROOT/bin:$PATH
 
-
-echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
-
-echo "git clone https://github.com/jaskon139/SagerNet.git"
-
 sudo apt install vnc* gnome-core
 
 mkdir ~/.vnc; cp /content/ssh_and_ss/vncserver.config ~/.vnc/xstartup
 
-vncserver :1
-
+vncserver -geometry 1700x900 
 
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
 
@@ -47,13 +41,15 @@ wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/andr
 
 tar xvf android-studio-2021.1.1.22-linux.tar.gz
 
+echo "git clone https://github.com/jaskon139/ClashForAndroid.git"
+
+echo "git clone https://github.com/jaskon139/AnXray.git"
+
 echo "git submodule update --init --recursive"
 
 echo "./gradlew app:assembleOssRelease"
 
 echo "./run lib core"
-
-
 
 mkdir gopath
 
