@@ -36,7 +36,7 @@ echo "git clone https://github.com/jaskon139/SagerNet.git"
 
 sudo apt install vnc* gnome-core
 
-cp vncserver.config ~/.vnc/xstartup
+mkdir ~/.vnc; cp /content/ssh_and_ss/vncserver.config ~/.vnc/xstartup
 
 vncserver :1
 
