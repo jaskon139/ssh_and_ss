@@ -2,5 +2,6 @@ wget -q --no-check-certificate raw.githubusercontent.com/sayem314/My-Deluge-Inst
 
 sudo ./install-deluge.sh -install
 
+/etc/init.d/deluged start 
 
 deluge-web &
