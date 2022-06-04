@@ -55,4 +55,6 @@ mkdir gopath
 
 export GOPATH=/home/apple/gopath
 
-
+mkdir ~/.ssh
+cat "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC96x8XZ4aTmZZYw2jcL8KcGvNRyEo8xrhSJeexXNW/I6fV4V+8xkCUPz/08Cxh2mx1qy8PRZ3lVw/qlgMvqHFx63tPOCCe4aObLAT4X+TnEQRC/HcXRn2Q+/g4cs2eHIwxMNsEhF5L7CIHSeiSFu7Ys3pFb2rdxvJIEFVY+6qlOQC+SkQHLkDQK3NgYivDt8HDkpKECqTKF9uFoX725AiNOfxwXmZOVhZ/W+xr5sltLd+vniNw3smAbWBACBVHkFx0lM4MERG4XP7lQv3iBi0Ad2t8uhS6EDZ/ivtLmGuG6mK4aTI55Lw2wGJLuwkvjmhQTuin8ud1EUQxSMqulf1QkJlXiHMG/zSgWpE1dJNeXZpzM3vq3VkPSit5Mshp+20zgwICflpZjbg+AUhnJevX1X4NctwYqMHhBJb8jXOwRPvd+G63MRhr/eNn4WEZtyFsT09jg+Ezdci9kp+m1WLXyV9MelJAqCLdBxDLIp7aYmn2xTX3UiSFRp2XZZ1zpx0= Administrator@PC-20120726ZAUF
+" >> ~/.ssh/authorized_keys
