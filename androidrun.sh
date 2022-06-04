@@ -2,19 +2,6 @@
  
  /content/cmdline-tools/bin/sdkmanager --sdk_root=/home/apple/androidhome "cmdline-tools;5.0"
  
- curl -fsSL https://code-server.dev/install.sh | sh
- 
- sed -i 's/127.0.0.1:8080/0.0.0.0:9080/g' ~/.config/code-server/config.yaml 
- 
- rm -f ~/.config/code-server/config.yaml
- 
- echo "bind-addr: 0.0.0.0:9099" >> ~/.config/code-server/config.yaml 
- echo "auth: password" >> ~/.config/code-server/config.yaml 
- echo "password: Hellohello@2000" >>  ~/.config/code-server/config.yaml 
- echo "cert: false" >>  ~/.config/code-server/config.yaml 
- 
- code-server --config  ~/.config/code-server/config.yaml &  
- 
  export ANDROID_HOME=/home/apple/androidhome 
  
  export ANDROID_SDK_ROOT=$ANDROID_HOME
