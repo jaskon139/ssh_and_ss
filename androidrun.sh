@@ -48,3 +48,8 @@ mkdir gopath
 export GOPATH=/home/apple/gopath
 
 
+echo  "./qemu-install.sh ./android-x86_64-7.1-r1.iso ./android.img"
+echo " ./qemu-run.sh ./android.img "
+echo " ./qemu-run.sh ./android.img -vnc localhost:0 -- run with VNC listener on for local incoming connections on 5900 port "
+
+
